@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteWise AI - Industrial Waste-to-Wealth Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <h1>WASTEWISE AI</h1>
+            <p class="subtitle">AI-Guided Industrial Waste-to-Wealth Optimization</p>
+            <div class="meta-tag">Team: Technical Titans | GKCIET</div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <!-- Input Section -->
+        <section class="card control-panel">
+            <h2>1. Real-time Waste Data Collection</h2>
+            <p class="instruction">Enter the composition of your metal-rich industrial waste stream below:</p>
+            
+            <form id="wasteForm">
+                <div class="input-group">
+                    <label for="copper">Copper (Cu) concentration %:</label>
+                    <input type="number" id="copper" min="0" max="100" value="35" required>
+                </div>
+                <div class="input-group">
+                    <label for="nickel">Nickel (Ni) concentration %:</label>
+                    <input type="number" id="nickel" min="0" max="100" value="25" required>
+                </div>
+                <div class="input-group">
+                    <label for="zinc">Zinc (Zn) concentration %:</label>
+                    <input type="number" id="zinc" min="0" max="100" value="15" required>
+                </div>
+                <div class="input-group">
+                    <label for="water">Water / Residue %:</label>
+                    <input type="number" id="water" min="0" max="100" value="25" required>
+                </div>
+                <button type="submit" class="btn-optimize">Execute Optimization Engine</button>
+            </form>
+            <div id="errorMsg" class="error-text"></div>
+        </section>
+
+        <!-- Analysis & Results Section -->
+        <section class="card results-panel">
+            <h2>2. Optimization Engine Analysis</h2>
+            
+            <div class="formula-box">
+                <code>Optimization Score = Value − Operating Cost − Environmental Penalty</code>
+            </div>
+
+            <div class="results-layout">
+                <div class="metric-box status-box">
+                    <h3>Best Feasible Pathway</h3>
+                    <div id="bestPathway" class="highlight-text">--</div>
+                    <span id="targetOutput" class="badge">--</span>
+                </div>
+                
+                <div class="metric-box score-box">
+                    <h3>System Optimization Score</h3>
+                    <div id="bestScore" class="highlight-text">--</div>
+                </div>
+            </div>
+
+            <h3>Ranked Recovery Pathways</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Pathway Option</th>
+                            <th>Estimated Value</th>
+                            <th>Operating Cost</th>
+                            <th>Impact Penalty</th>
+                            <th>Net Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pathwayTableBody">
+                        <tr>
+                            <td colspan="6" class="placeholder-row">Submit waste composition metrics to populate ranked evaluations.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 WasteWise AI Project Portfolio. Closing the Circular Loop.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

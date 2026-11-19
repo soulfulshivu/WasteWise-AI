@@ -1,0 +1,231 @@
+/* Custom properties for a modern industrial environment */
+:root {
+    --bg-dark: #121824;
+    --card-bg: #1e2640;
+    --primary-green: #4caf50;
+    --accent-orange: #ff9800;
+    --text-light: #f5f7fa;
+    --text-muted: #9aa5b1;
+    --border-color: #2d3748;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--primary-green);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.meta-tag {
+    display: inline-block;
+    background-color: #2b3658;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: var(--accent-orange);
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    width: 100%;
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-green);
+    padding-left: 10px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 20px 0 10px 0;
+    color: var(--text-muted);
+}
+
+.instruction {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--text-light);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #121824;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.btn-optimize {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-green);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-optimize:hover {
+    background-color: #3e8e41;
+}
+
+.error-text {
+    color: #f44336;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formula-box {
+    background-color: #121824;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+}
+
+.results-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.metric-box {
+    background: #252f54;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.highlight-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: #121824;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #121824;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.placeholder-row {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 30px;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
